@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Start the test
         run: |
-          sh build-k6.sh
+          sudo sh build-k6.sh
