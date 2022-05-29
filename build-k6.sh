@@ -12,7 +12,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$GOPATH/bin:$PATH
 source ~/.bashrc
 echo $GOPATH
-cd /usr/local/go
+cd /usr/local/go/bin
 pwd
 xk6 build latest \
   --with github.com/grafana/xk6-exec@latest \
