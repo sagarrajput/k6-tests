@@ -1,6 +1,7 @@
 #!/bin/bash
 apt-get install git
 eval echo ~$USER
+cd /Users/root
 wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
 chmod 777 *.*
 rm -rf /Users/root/go && tar -C /Users/root -xzf go1.18.2.linux-amd64.tar.gz
