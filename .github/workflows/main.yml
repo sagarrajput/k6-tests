@@ -19,10 +19,6 @@ jobs:
         run: |
           go version          
           go install go.k6.io/xk6/cmd/xk6@latest
-          export GOPATH=/usr/local/go
-          export PATH=$GOPATH/bin:$PATH
-          . ~/.bashrc
-          echo $GOPATH
       - name: build k6
         working-directory: /usr/local/go/bin
         run: |
