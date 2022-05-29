@@ -8,6 +8,7 @@ export PATH=/usr/local/go/bin
 go version
 go install go.k6.io/xk6/cmd/xk6@latest
 export GOPATH=/usr/local/go/bin
+export GOBIN=$GOPATH/bin
 export PATH=$GOPATH/bin:$PATH
 source ~/.bashrc
 echo $GOPATH
