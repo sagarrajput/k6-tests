@@ -30,6 +30,7 @@ jobs:
         run: |
           cd /usr/local/go/bin
           pwd
+          go
           xk6 build latest \
             --with github.com/grafana/xk6-exec@latest \
             --with github.com/avitalique/xk6-file@latest
