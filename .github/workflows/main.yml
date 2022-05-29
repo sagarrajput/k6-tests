@@ -23,8 +23,8 @@ jobs:
           . ~/.bashrc
           echo $GOPATH
       - name: build k6
-        working-directory: /usr/root/go/bin
         run: |
+          cd /usr/root/go/bin
           pwd
           xk6 build latest \
             --with github.com/grafana/xk6-exec@latest \
