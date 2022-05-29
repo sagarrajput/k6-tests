@@ -7,7 +7,7 @@ export PATH=/usr/local/go/bin
 $HOME/.profile
 go version
 go install go.k6.io/xk6/cmd/xk6@latest
-cd /Users/$USER/go/bin
+cd /usr/local/go/bin
 xk6 build latest \
   --with github.com/grafana/xk6-exec@latest \
   --with github.com/avitalique/xk6-file@latest
