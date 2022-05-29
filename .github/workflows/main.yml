@@ -20,7 +20,7 @@ jobs:
           go install go.k6.io/xk6/cmd/xk6@latest
           export GOPATH=/usr/local/go
           export PATH=$PATH:$GOPATH/bin
-          . ~/.bashrc
+          source .bash_profile
           echo $GOPATH
           echo $PATH
       - name: build k6
