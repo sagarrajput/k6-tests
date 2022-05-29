@@ -16,7 +16,7 @@ jobs:
           sudo sh build-k6.sh
       - name: build k6
         run: |
-          sudo cd /usr/local/go/bin
+          cd /usr/local/go/bin
           pwd
           xk6 build latest \
             --with github.com/grafana/xk6-exec@latest \

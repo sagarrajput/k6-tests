@@ -3,9 +3,9 @@ apt-get install git
 eval echo ~$USER
 wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
 chmod 777 *.*
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
 export PATH=/usr/local/go/bin
-sudo $HOME/.profile.
+$HOME/.profile.
 go version
 go install go.k6.io/xk6/cmd/xk6@latest
 export GOPATH=/usr/local/go
