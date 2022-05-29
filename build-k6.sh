@@ -10,6 +10,7 @@ export GOPATH=/usr/local/go/bin
 export PATH=$GOPATH/bin:$PATH
 source ~/.bash_profile
 cd /usr/local/go
+pwd
 xk6 build latest \
   --with github.com/grafana/xk6-exec@latest \
   --with github.com/avitalique/xk6-file@latest
