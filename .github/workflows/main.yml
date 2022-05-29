@@ -16,16 +16,17 @@ jobs:
           sudo sh build-k6.sh
       - name: save env variables
         run: |
-          export PATH=/usr/local/go/bin
-          go version          
+          go version
+          go install github.com/k6io/xk6/cmd/xk6@latest
           export GOPATH=/usr/local/go
           export GOBIN=$GOPATH/bin
           export PATH=$GOPATH/bin:$PATH
           echo $GOPATH
       - name: build k6
         run: |
-          go install go.k6.io/xk6/cmd/xk6@latest
           cd /usr/local/go/bin
           pwd
-          xk6 build latest \ --with github.com/grafana/xk6-exec@latest \ --with github.com/avitalique/xk6-file@latest
+          xk6 build latest \
+            --with github.com/grafana/xk6-exec@latest \
+            --with github.com/avitalique/xk6-file@latest
           ./k6 run tests/simple.js
