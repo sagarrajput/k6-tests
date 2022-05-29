@@ -21,6 +21,7 @@ jobs:
           export GOPATH=/usr/local/go
           export GOBIN=$GOPATH/bin
           export PATH=$GOPATH/bin:$PATH
+          . ~/.bashrc
           echo $GOPATH
       - name: build k6
         run: |
