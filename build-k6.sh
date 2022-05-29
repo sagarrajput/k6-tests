@@ -8,14 +8,8 @@ export PATH=/usr/local/go/bin
 sudo $HOME/.profile.
 go version
 go install go.k6.io/xk6/cmd/xk6@latest
-export GOPATH=/usr/local/go/bin
+export GOPATH=/usr/local/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOPATH/bin:$PATH
 $HOME/.profile.
 echo $GOPATH
-sudo cd /usr/local/go/bin
-pwd
-xk6 build latest \
-  --with github.com/grafana/xk6-exec@latest \
-  --with github.com/avitalique/xk6-file@latest
-./k6 run tests/simple.js
