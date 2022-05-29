@@ -15,14 +15,11 @@ jobs:
         run: |
           sudo ./build-k6.sh
       - name: save env variables
-        working-directory: /usr/local/go/bin
         run: |
           go version          
           go install go.k6.io/xk6/cmd/xk6@latest
       - name: build k6
-        working-directory: /usr/local/go/bin
         run: |
-          cd /usr/local/go/bin
           pwd
           xk6 build latest \
             --with github.com/grafana/xk6-exec@latest \
