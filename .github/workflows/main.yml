@@ -25,7 +25,6 @@ jobs:
           echo $PATH
       - name: build k6
         run: |
-          restart
           cd /usr/local/go/bin
           pwd
           xk6 build latest \
