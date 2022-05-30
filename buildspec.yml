@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       golang: 1.13
     commands:
-      - go install go.k6.io/xk6/cmd/xk6@latest
+      - go install go.k6.io/xk6/cmd/xk6
       - xk6 build --with github.com/grafana/xk6-exec@latest --with github.com/avitalique/xk6-file@latest
 
   build:
