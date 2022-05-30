@@ -18,7 +18,7 @@ jobs:
           tar -xvf xk6_0.7.0_linux_amd64.tar.gz
       - name: build k6
         run: |
-          ./xk6_0.7.0_linux_amd64/xk6 build latest \
+          ./xk6 build latest \
             --with github.com/grafana/xk6-exec@latest \
             --with github.com/avitalique/xk6-file@latest
           ./k6 run tests/simple.js
