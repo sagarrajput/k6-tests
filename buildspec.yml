@@ -5,8 +5,8 @@ phases:
       golang: 1.16
     commands:
       - go install go.k6.io/xk6/cmd/xk6@latest
+      - xk6 build --with github.com/grafana/xk6-exec@latest --with github.com/avitalique/xk6-file@latest
 
   build:
     commands:
-      - xk6 build --with github.com/avitalique/xk6-file
       - ./k6 run tests/simple.js
