@@ -11,25 +11,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
       - uses: actions/checkout@v2
-      - name: install go
+      - name: install xk6
         run: |
-          sudo apt-get install git
-          sudo wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
-          chmod 777 *.*
-          sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
-      - name: install xk6 and add go to $PATH
-        run: |
-          go version
-          go install go.k6.io/xk6/cmd/xk6@latest
-          export GOPATH=/usr/local/go
-          export PATH=$PATH:$GOPATH/bin
-          source ~/.bashrc
-          echo $GOPATH
-          echo $PATH
+          wget https://github.com/grafana/xk6/releases/download/v0.7.0/xk6_0.7.0_linux_amd64.tar.gz
+          tar -xvf xk6_0.7.0_linux_amd64.tar.gz
       - name: build k6
         run: |
-          cd /usr/local/go/bin
-          xk6 build latest \
+          ./xk6_0.7.0_linux_amd64/xk6 build latest \
             --with github.com/grafana/xk6-exec@latest \
             --with github.com/avitalique/xk6-file@latest
           ./k6 run tests/simple.js
