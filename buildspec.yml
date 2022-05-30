@@ -8,5 +8,5 @@ phases:
 
   build:
     commands:
-      - xk6 build --with github.com/avitalique/xk6-file@latest
+      - xk6 build --with github.com/avitalique/xk6-file
       - ./k6 run tests/simple.js
