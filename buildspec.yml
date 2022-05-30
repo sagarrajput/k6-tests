@@ -1,9 +1,10 @@
 version: 0.2
 phases:
   install:
-    runtime-versions:
-      golang: 1.16
     commands:
+      - cd $HOME/.goenv && git pull --ff-only && cd -
+      - goenv install 1.18
+      - goenv local 1.18
       - go install go.k6.io/xk6/cmd/xk6@latest
 
   build:
