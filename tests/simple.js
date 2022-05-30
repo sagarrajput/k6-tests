@@ -1,5 +1,6 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
+import exec from 'k6/x/exec';
 
 // A simple counter for http requests
 
@@ -12,6 +13,7 @@ export const options = {
 };
 
 export default function () {
+  console.log('date here: ' + exec.command('date'));
   // our HTTP request, note that we are saving the response to res, which can be accessed later
 
   const res = http.get('http://test.k6.io');
