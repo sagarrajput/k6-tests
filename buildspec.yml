@@ -8,5 +8,7 @@ phases:
 
   build:
     commands:
-      - xk6 build --with github.com/grafana/xk6-exec@latest --with github.com/avitalique/xk6-file@latest
+      - xk6 build latest \
+        --with github.com/grafana/xk6-exec@latest \
+        --with github.com/avitalique/xk6-file@latest
       - ./k6 run tests/simple.js
